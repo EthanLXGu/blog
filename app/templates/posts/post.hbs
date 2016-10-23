@@ -1,6 +1,24 @@
-<h1>{{model.information}}</h1>  
-<div class = "body"> 
-{{#each model.comments as |comment|}}
-<li>{{comment.info}}</li>
-{{/each}}
+<div class="col-md-8 col-xs-8">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h2>{{model.information}}</h2>  
+			<div> 
+			{{#each model.comments as |comment|}}
+				<li>{{comment.info}}</li>
+				{{/each}}
+			</div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            {{#if true}}
+                <form {{action "submit" on="submit"}}>
+                    {{input valuue=email type="hidden"}}
+                    {{input class = "col-md-10" value=comment}} 
+                    <button class = "col-md-2" type="submit">comment</button>
+                </form>
+            {{/if}}
+        </div>
+    </div>
 </div>
