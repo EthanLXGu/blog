@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
 			console.log(" create a new post: " + post_text)
 			const new_post = this.store.createRecord('post', { information: post_text });
 			new_post.save();
-			// this.transitionToRoute('posts');
+			this.transitionToRoute('posts');
 		}
 	}
 });
