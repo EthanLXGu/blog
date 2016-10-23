@@ -13,6 +13,7 @@ Router.map(function() {
     this.route('post', { path: '/:post_id' });
   });
   this.route('new-blog');
+  this.route('login');
 });
 
 export default Router;
