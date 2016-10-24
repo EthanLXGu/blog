@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   session: Ember.inject.service('session'),
+  sessionAccount: Ember.inject.service('current-user'),
   // currentUser: null, 
   // updateCurrentUser: function () { 
   //   if (this.get("session.isAuthenticated")){
