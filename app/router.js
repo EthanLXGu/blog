@@ -14,6 +14,7 @@ Router.map(function() {
   });
   this.route('new-blog');
   this.route('login');
+  this.route('signup');
 });
 
 export default Router;
