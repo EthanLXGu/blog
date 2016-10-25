@@ -4,8 +4,8 @@
             <h4>{{model.user.email}}</h4>
             <h2>{{model.information}}</h2>  
 			<div> 
-			{{#each model.comments as |comment|}}
-				<li>{{comment.info}}</li>
+    			{{#each model.comments as |comment|}}
+    				<li>{{comment.info}}</li>
 				{{/each}}
 			</div>
         </div>
@@ -13,12 +13,14 @@
 
     <div class="panel panel-default">
         <div class="panel-body">
-            {{#if true}}
+            {{#if session.isAuthenticated}}
                 <form {{action "submit" on="submit"}}>
                     {{input valuue=email type="hidden"}}
                     {{input class = "col-md-10" value=comment}} 
                     <button class = "col-md-2" type="submit">comment</button>
                 </form>
+            {{else}}
+                <p><a href="/login">Login in</a> to give a comment for this post!{{session.isAuthenticated}}</p>
             {{/if}}
         </div>
     </div>
